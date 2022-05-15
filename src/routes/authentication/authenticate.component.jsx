@@ -1,12 +1,14 @@
 import { getRedirectResult } from "firebase/auth";
 import { useEffect } from "react";
-import SignUpForm from "../../components/Sign Up/sign-in-form.component";
+import SignUpForm from "../../components/Sign-up/sign-up-form.component";
+import SignInForm from "../../components/Sign-in/sign-in-form.component";
 import {
   signInWithGooglePopup,
   signInWithGoogleRedirect,
   createUserDocumentFromAuth,
   auth,
 } from "../../utils/firebase/firebase.utils";
+import "./authenticate.style.scss";
 
 const Authentication = () => {
   useEffect(() => {
@@ -24,9 +26,8 @@ const Authentication = () => {
     console.log("userDecRef ", userDecRef);
   };
   return (
-    <div>
-      <h1>Sign In Page</h1>
-      <button onClick={logGoogleUser}>Sign in with Google Pop Up</button>
+    <div className="auths-container">
+      <SignInForm />
       <SignUpForm />
     </div>
   );
