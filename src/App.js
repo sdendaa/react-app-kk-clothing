@@ -2,8 +2,8 @@ import "./App.css";
 import "./categories.styles.scss";
 import Home from "./routes/home/home.component";
 import { Routes, Route } from "react-router-dom";
-import Navigation from "./components/navigation/Navigation.component";
-import Shop from "./components/shop/shop.component";
+import Navigation from "./routes/navigation/Navigation.component";
+import Shop from "./routes/shop/shop.component";
 import Authentication from "./routes/authentication/authenticate.component";
 
 const App = () => {

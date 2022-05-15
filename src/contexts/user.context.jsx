@@ -24,5 +24,8 @@ export const UserProvider = ({ children }) => {
     return unsubscribe;
   }, []);
 
+  console.log("chvalue ildren", value);
+  console.log("children", children);
+
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
